@@ -26,7 +26,7 @@ def run():
     img1 = img1.resize((350,350))
     st.image(img1,use_column_width=False)
     st.title("Birds Species Classification")
-    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>* Data is based "270 Bird Species also see 70 Sports Dataset"</h4>''',
+    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>* To dela"</h4>''',
                 unsafe_allow_html=True)
 
     img_file = st.file_uploader("Choose an Image of Bird", type=["jpg", "png"])
