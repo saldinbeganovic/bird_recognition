@@ -32,7 +32,7 @@ def run():
     img_string = st.text_input("Vpiši base64 string")
     if img_string is not None:
         with open("slika", "wb") as f:
-            image=base64.decodebytes(img_string)
+            image=base64.b64decode(img_string)
 
 
 
