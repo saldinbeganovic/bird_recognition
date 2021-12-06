@@ -29,18 +29,15 @@ def run():
     st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>* To dela"</h4>''',
                 unsafe_allow_html=True)
 
-    img_file = st.file_uploader("Choose an Image of Bird", type=["jpg", "png"])
-    if img_file is not None:
-        st.image(img_file,use_column_width=False)
-        save_image_path = './upload_images/'+img_file.name
-        with open(save_image_path, "wb") as f:
-            f.write(img_file.getbuffer())
-        with open(save_image_path, "rb") as img_file:
-            photo_string = base64.b64encode(img_file.read())
+    img_string = st.text_input("Vpiši base64 string")
+    if img_string is not None:
+        with open("slika", "wb") as f:
+            image=base64.decodebytes(img_string)
+
 
 
         if st.button("Predict"):
-            result = processed_img(save_image_path)
-            st.success("Predicted Bird is: "+result+", in base64: "+photo_string.decode('utf-8'))
+            result = processed_img(image)
+            st.success("Predicted Bird is: "+result)
 
 run()
