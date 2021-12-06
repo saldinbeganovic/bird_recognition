@@ -36,7 +36,7 @@ def run():
 
 
 
-        if st.button("Predict"):
+    if img_string:
             result = processed_img(image)
             st.success("Predicted Bird is: "+result)
 
