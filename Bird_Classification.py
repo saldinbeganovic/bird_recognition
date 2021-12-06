@@ -37,12 +37,11 @@ def run():
             f.write(img_file.getbuffer())
         with open(save_image_path, "rb") as img_file:
             photo_string = base64.b64encode(img_file.read())
-        
+
 
         if st.button("Predict"):
             result = processed_img(save_image_path)
             st.success("Predicted Bird is: "+result)
-    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>'''+photo_string+'"</h4>''',
-                unsafe_allow_html=True)
-
-run()
+            st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>''' + photo_string + '"</h4>''',
+                        unsafe_allow_html=True)
+    run()
