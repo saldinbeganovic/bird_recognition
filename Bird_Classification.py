@@ -33,6 +33,12 @@ def run():
     if img_string is not None:
         with open("slika", "wb") as f:
             image=base64.b64decode(img_string)
+        st.image(image, use_column_width=False)
+        save_image_path = './upload_images/' + image.name
+        with open(save_image_path, "wb") as f:
+            f.write(image.getbuffer())
+
+
 
 
 
