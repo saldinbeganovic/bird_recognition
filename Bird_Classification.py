@@ -41,6 +41,6 @@ def run():
 
         if st.button("Predict"):
             result = processed_img(save_image_path)
-            st.success("Predicted Bird is: "+result)
-            print(photo_string)
+            st.success("Predicted Bird is: "+result+", in base64: "+photo_string.decode('utf-8'))
+
 run()
