@@ -42,7 +42,7 @@ def run():
 
 
     if img_string:
-            result = processed_img(save_image_path)
+            result = processed_img(image)
             st.success("Predicted Bird is: "+result)
 
 run()
