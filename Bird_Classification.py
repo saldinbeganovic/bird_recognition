@@ -26,7 +26,7 @@ def processed_img(img_path):
 def run():
 
     st.title("Birds Species Classification")
-    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'> To dela"</h4>''',
+    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'> To dela</h4>''',
                 unsafe_allow_html=True)
 
     img_string = st.text_input("Vpiši base64 string")
@@ -34,9 +34,8 @@ def run():
         with open("slika", "wb") as f:
             image=base64.b64decode(img_string)
         st.image(image, use_column_width=False)
-        save_image_path = './upload_images/' + image.name
-        with open(save_image_path, "wb") as f:
-            f.write(image.getbuffer())
+        save_image_path = 'upload_images/' + image
+
 
 
 
