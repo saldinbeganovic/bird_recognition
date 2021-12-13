@@ -26,7 +26,7 @@ def processed_img(img_path):
 def run():
 
     st.title("Birds Species Classification")
-    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>* To dela"</h4>''',
+    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'> To dela"</h4>''',
                 unsafe_allow_html=True)
 
     img_string = st.text_input("Vpiši base64 string")
@@ -43,7 +43,7 @@ def run():
 
 
     if img_string:
-            result = processed_img(image)
+            result = processed_img(save_image_path)
             st.success("Predicted Bird is: "+result)
 
 run()
